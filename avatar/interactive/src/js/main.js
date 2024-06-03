@@ -205,6 +205,9 @@ window.startSession = () => {
       connectToAvatarService()
       setupWebRTC()
     })
+    .then(() => {
+      document.getElementById('loginOverlay').style.display = 'none'; // hide the login card
+    })
 }
 
 async function greeting() {
