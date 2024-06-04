@@ -14,7 +14,7 @@ var system_prompt = `You are an AI assistant focused on delivering brief product
 
 const TTSVoice = "en-US-JennyMultilingualNeural" // Update this value if you want to use a different voice
 
-const CogSvcRegion = "eastus" // Fill your Azure cognitive services region here, e.g. westus2
+const CogSvcRegion = "swedencentral" // Fill your Azure cognitive services region here, e.g. westus2
 
 const IceServerUrl = "turn:relay.communication.microsoft.com:3478" // Fill your ICE server URL here, e.g. turn:turn.azure.com:3478
 let IceServerUsername
@@ -276,7 +276,7 @@ window.stopSession = () => {
 }
 
 window.startRecording = () => {
-  const speechConfig = SpeechSDK.SpeechConfig.fromAuthorizationToken(token, 'westeurope');
+  const speechConfig = SpeechSDK.SpeechConfig.fromAuthorizationToken(token, 'swedencentral');
   speechConfig.authorizationToken = token;
   speechConfig.SpeechServiceConnection_LanguageIdMode = "Continuous";
   var autoDetectSourceLanguageConfig = SpeechSDK.AutoDetectSourceLanguageConfig.fromLanguages(supported_languages);
